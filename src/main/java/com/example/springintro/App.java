@@ -26,6 +26,9 @@ public class App
         // I call the method sayHello from the object service (HelloWorldService)
         System.out.println(service.sayHello());
         
+        HelloWorldService service2 = context.getBean(HelloWorldService.class);
+        System.out.println("Are service1 and service2 is the same? "+ (service == service2));
+        
         // Close the context/application
         ((AnnotationConfigApplicationContext)context).close();
     }
